@@ -1,0 +1,75 @@
+11-20 01:05:24.758 127.0.0.1:54321       83865  #r thread INFO: Found XGBoost backend with library: xgboost4j
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Your system supports only minimal version of XGBoost (no GPUs, no multithreading)!
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: ----- H2O started  -----
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Build git branch: rel-weierstrass
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Build git hash: f1f65fe382ac4a0dc4631b9ee1468eb8eef7b27e
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Build git describe: jenkins-3.14.0.6-6-gf1f65fe38
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Build project version: 3.14.0.7 (latest version: 3.14.0.7)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Build age: 30 days
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Built by: 'jenkins'
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Built on: '2017-10-20 18:37:17'
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Watchdog Build git branch: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Watchdog Build git hash: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Watchdog Build git describe: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Watchdog Build project version: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Watchdog Built by: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Watchdog Built on: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: XGBoost Build git branch: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: XGBoost Build git hash: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: XGBoost Build git describe: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: XGBoost Build project version: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: XGBoost Built by: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: XGBoost Built on: (unknown)
+11-20 01:05:24.769 127.0.0.1:54321       83865  #r thread INFO: Processed H2O arguments: [-name, sparkling-water-Macbook_local-1511139901370, -ga_opt_out, -log_level, INFO, -baseport, 54321, -ip, 127.0.0.1, -log_dir, /Users/Macbook/Documents/Study/study_R/h2ologs/local-1511139901370]
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Java availableProcessors: 4
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Java heap totalMemory: 292.5 MB
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Java heap maxMemory: 910.5 MB
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Java version: Java 1.8.0_121 (from Oracle Corporation)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: JVM launch parameters: [-Xmx1g]
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: OS version: Mac OS X 10.12.6 (x86_64)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Machine physical memory: 8.00 GB
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: X-h2o-cluster-id: 1511139923156
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: User name: 'Macbook'
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Opted out of sending usage metrics.
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: IPv6 stack selected: false
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Network address/interface is not reachable in 150ms: /fe80:0:0:0:2845:bfac:4bc0:5370%utun3/name:utun3 (utun3)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Network address/interface is not reachable in 150ms: /fe80:0:0:0:da60:2f03:ca64:7ecc%utun2/name:utun2 (utun2)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Network address/interface is not reachable in 150ms: /fe80:0:0:0:d8ff:d91e:66a0:fc08%utun1/name:utun1 (utun1)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Network address/interface is not reachable in 150ms: /fe80:0:0:0:e45e:8f34:3ce8:ee8b%utun0/name:utun0 (utun0)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Network address/interface is not reachable in 150ms: /fe80:0:0:0:786a:5cff:fe1e:5bd%awdl0/name:awdl0 (awdl0)
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Possible IP Address: en0 (en0), fe80:0:0:0:41:e6ba:7ebd:555c%en0
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Possible IP Address: en0 (en0), 192.168.0.13
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Possible IP Address: lo0 (lo0), fe80:0:0:0:0:0:0:1%lo0
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Possible IP Address: lo0 (lo0), 0:0:0:0:0:0:0:1
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: Possible IP Address: lo0 (lo0), 127.0.0.1
+11-20 01:05:24.770 127.0.0.1:54321       83865  #r thread INFO: H2O node running in unencrypted mode.
+11-20 01:05:24.773 127.0.0.1:54321       83865  #r thread INFO: Internal communication uses port: 54322
+11-20 01:05:24.773 127.0.0.1:54321       83865  #r thread INFO: Listening for HTTP and REST traffic on http://127.0.0.1:54321/
+11-20 01:05:24.810 127.0.0.1:54321       83865  #r thread INFO: H2O cloud name: 'sparkling-water-Macbook_local-1511139901370' on /127.0.0.1:54321, discovery address /238.68.22.172:60996
+11-20 01:05:24.810 127.0.0.1:54321       83865  #r thread INFO: If you have trouble connecting, try SSH tunneling from your local machine (e.g., via port 55555):
+11-20 01:05:24.810 127.0.0.1:54321       83865  #r thread INFO:   1. Open a terminal and run 'ssh -L 55555:localhost:54321 Macbook@127.0.0.1'
+11-20 01:05:24.810 127.0.0.1:54321       83865  #r thread INFO:   2. Point your browser to http://localhost:55555
+11-20 01:05:24.840 127.0.0.1:54321       83865  #r thread INFO: Log dir: '/Users/Macbook/Documents/Study/study_R/h2ologs/local-1511139901370'
+11-20 01:05:24.840 127.0.0.1:54321       83865  #r thread INFO: Cur dir: '/Users/Macbook/Documents/Study/study_R'
+11-20 01:05:24.854 127.0.0.1:54321       83865  #r thread INFO: HDFS subsystem successfully initialized
+11-20 01:05:24.864 127.0.0.1:54321       83865  #r thread INFO: S3 subsystem successfully initialized
+11-20 01:05:24.864 127.0.0.1:54321       83865  #r thread INFO: Flow dir: '/Users/Macbook/h2oflows'
+11-20 01:05:24.878 127.0.0.1:54321       83865  #r thread INFO: Cloud of size 1 formed [localhost/127.0.0.1:54321]
+11-20 01:05:24.901 127.0.0.1:54321       83865  #r thread INFO: Registered parsers: [GUESS, ARFF, XLS, SVMLight, CSV]
+11-20 01:05:24.902 127.0.0.1:54321       83865  #r thread INFO: Watchdog extension initialized
+11-20 01:05:24.902 127.0.0.1:54321       83865  #r thread INFO: XGBoost extension initialized
+11-20 01:05:24.902 127.0.0.1:54321       83865  #r thread INFO: Registered 2 core extensions in: 38ms
+11-20 01:05:24.902 127.0.0.1:54321       83865  #r thread INFO: Registered H2O core extensions: [Watchdog, XGBoost]
+11-20 01:05:25.465 127.0.0.1:54321       83865  #r thread INFO: Registered: 161 REST APIs in: 563ms
+11-20 01:05:25.466 127.0.0.1:54321       83865  #r thread INFO: Registered REST API extensions: [Algos, XGBoost, AutoML, Core V3, Core V4]
+11-20 01:05:25.624 127.0.0.1:54321       83865  #r thread INFO: Registered: 246 schemas in 158ms
+11-20 01:05:25.624 127.0.0.1:54321       83865  #r thread INFO: H2O started in 2236ms
+11-20 01:05:25.624 127.0.0.1:54321       83865  #r thread INFO: 
+11-20 01:05:25.624 127.0.0.1:54321       83865  #r thread INFO: Open H2O Flow in your web browser: http://127.0.0.1:54321
+11-20 01:05:25.624 127.0.0.1:54321       83865  #r thread INFO: 
+11-20 01:05:35.670 127.0.0.1:54321       83865  #3717-178 INFO: GET /, parms: {}
+11-20 01:05:35.894 127.0.0.1:54321       83865  #3717-179 INFO: GET /, parms: {}
+11-20 01:05:36.169 127.0.0.1:54321       83865  #3717-181 INFO: GET /3/Capabilities/API, parms: {}
+11-20 01:05:36.170 127.0.0.1:54321       83865  #3717-181 INFO: Locking cloud to new members, because water.api.schemas3.CapabilitiesV3
+11-20 01:05:36.205 127.0.0.1:54321       83865  #3717-182 INFO: GET /3/InitID, parms: {}
+11-20 01:05:36.762 127.0.0.1:54321       83865  #3717-184 INFO: GET /3/Frames/frame_rdd_32_bda4f9f1d3344d45b0894e268e314c82, parms: {row_count=10}
