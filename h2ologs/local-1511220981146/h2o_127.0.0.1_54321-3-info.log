@@ -1978,3 +1978,502 @@
 11-20 23:52:05.923 127.0.0.1:54321       32110  #6426-180 INFO: GET /, parms: {}
 11-20 23:52:05.947 127.0.0.1:54321       32110  #6426-182 INFO: GET /3/Capabilities/API, parms: {}
 11-20 23:52:05.963 127.0.0.1:54321       32110  #6426-183 INFO: GET /3/InitID, parms: {}
+11-22 00:32:38.917 127.0.0.1:54321       32110  #6426-186 INFO: GET /, parms: {}
+11-22 00:32:38.935 127.0.0.1:54321       32110  #6426-181 INFO: GET /, parms: {}
+11-22 00:32:38.973 127.0.0.1:54321       32110  #6426-183 INFO: GET /3/Capabilities/API, parms: {}
+11-22 00:32:38.989 127.0.0.1:54321       32110  #6426-180 INFO: GET /3/InitID, parms: {}
+11-22 00:32:39.067 127.0.0.1:54321       32110  #6426-185 INFO: GET /3/Frames/frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3, parms: {row_count=10}
+11-22 00:35:48.446 127.0.0.1:54321       32110  #6426-181 INFO: GET /3/ModelBuilders/kmeans, parms: {}
+11-22 00:35:48.497 127.0.0.1:54321       32110  #6426-183 INFO: POST /3/ModelBuilders/kmeans, parms: {seed=1, k=3, training_frame=frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3, ignored_columns=["Sepal_Length","Sepal_Width","Species"]}
+11-22 00:35:48.528 127.0.0.1:54321       32110  FJ-1-3    INFO: Building H2O KMeans model with these parameters:
+11-22 00:35:48.548 127.0.0.1:54321       32110  FJ-1-3    INFO: {"_train":{"name":"frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3","type":"Key"},"_valid":null,"_nfolds":0,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"AUTO","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":["Sepal_Length","Sepal_Width","Species"],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":0,"_stopping_metric":"AUTO","_stopping_tolerance":0.001,"_response_column":null,"_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_k":3,"_max_iterations":10,"_standardize":true,"_init":"Furthest","_user_points":null,"_pred_indicator":false,"_estimate_k":false}
+11-22 00:35:48.548 127.0.0.1:54321       32110  FJ-1-3    INFO: Dropping ignored columns: [Sepal_Length, Sepal_Width, Species]
+11-22 00:35:48.623 127.0.0.1:54321       32110  FJ-1-3    INFO: Running Lloyds iteration for 3 centroids.
+11-22 00:35:48.652 127.0.0.1:54321       32110  FJ-1-3    INFO: Lloyds converged after 6 iterations.
+11-22 00:35:48.652 127.0.0.1:54321       32110  FJ-1-3    INFO: Relative improvement in total withinss: 1.0
+11-22 00:35:48.661 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Summary:
+11-22 00:35:48.661 127.0.0.1:54321       32110  FJ-1-3    INFO:   Number of Rows  Number of Clusters  Number of Categorical Columns  Number of Iterations  Within Cluster Sum of Squares  Total Sum of Squares  Between Cluster Sum of Squares
+11-22 00:35:48.661 127.0.0.1:54321       32110  FJ-1-3    INFO:              150                   3                              0                     6                       17.90678             298.00000                       280.09322
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO: Scoring History:
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:             Timestamp    Duration  Iterations  Number of Reassigned Observations  Within Cluster Sum Of Squares
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.039 sec           0                                NaN                            NaN
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.109 sec           1                              150.0                       42.82280
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.121 sec           2                                7.0                       19.17129
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.122 sec           3                                2.0                       18.31372
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.123 sec           4                                3.0                       18.10966
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.125 sec           5                                1.0                       17.92119
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   2017-11-22 00:35:48   0.126 sec           6                                0.0                       17.90678
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO: Centroid Statistics:
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:   Centroid  Size  Within Cluster Sum of Squares
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:          1    50                        1.41087
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:          2    48                        9.29317
+11-22 00:35:48.663 127.0.0.1:54321       32110  FJ-1-3    INFO:          3    52                        7.20274
+11-22 00:35:49.638 127.0.0.1:54321       32110  #6426-186 INFO: GET /3/Models/KMeans_model_R_1511221425033_4, parms: {}
+11-22 00:39:14.276 127.0.0.1:54321       32110  #6426-184 INFO: GET /3/ModelBuilders/pca, parms: {}
+11-22 00:39:14.316 127.0.0.1:54321       32110  #6426-180 INFO: POST /3/ModelBuilders/pca, parms: {seed=1, k=4, training_frame=frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3, ignored_columns=["Species"]}
+11-22 00:39:14.335 127.0.0.1:54321       32110  FJ-1-1    INFO: Building H2O PCA model with these parameters:
+11-22 00:39:14.344 127.0.0.1:54321       32110  FJ-1-1    INFO: {"_train":{"name":"frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3","type":"Key"},"_valid":null,"_nfolds":0,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"AUTO","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":["Species"],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":0,"_stopping_metric":"AUTO","_stopping_tolerance":0.001,"_response_column":null,"_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_transform":"NONE","_pca_method":"GramSVD","_k":4,"_max_iterations":1000,"_use_all_factor_levels":false,"_compute_metrics":true,"_impute_missing":false}
+11-22 00:39:14.344 127.0.0.1:54321       32110  FJ-1-1    INFO: Dropping ignored columns: [Species]
+11-22 00:39:14.374 127.0.0.1:54321       32110  FJ-1-1    WARN: _train: Dataset used may contain fewer number of rows due to removal of rows with NA/missing values.  If this is not desirable, set impute_missing argument in pca call to TRUE/True/true/... depending on the client language.
+11-22 00:39:15.437 127.0.0.1:54321       32110  #6426-181 INFO: GET /3/Models/PCA_model_R_1511221425033_5, parms: {}
+11-22 00:46:34.524 127.0.0.1:54321       32110  #6426-180 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_1 (:= frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3 (as.factor (cols frame_rdd_121_80ce2b4e25567caeb3f561089cb24aa3 [4])) [4] [])), session_id=_sid_aba0}
+11-22 00:46:34.723 127.0.0.1:54321       32110  #6426-182 INFO: GET /3/Frames/RTMP_sid_aba0_1, parms: {row_count=10}
+11-22 00:46:35.454 127.0.0.1:54321       32110  #6426-181 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_2 (rows RTMP_sid_aba0_1 (<= (h2o.runif RTMP_sid_aba0_1 1) 0.75))), session_id=_sid_aba0}
+11-22 00:46:35.482 127.0.0.1:54321       32110  #6426-184 INFO: GET /3/Frames/RTMP_sid_aba0_2, parms: {row_count=10}
+11-22 00:46:35.558 127.0.0.1:54321       32110  #6426-182 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_4 (rows RTMP_sid_aba0_1 (> (tmp= RTMP_sid_aba0_3 (h2o.runif RTMP_sid_aba0_1 1)) 0.75))), session_id=_sid_aba0}
+11-22 00:46:35.574 127.0.0.1:54321       32110  #6426-185 INFO: GET /3/Frames/RTMP_sid_aba0_4, parms: {row_count=10}
+11-22 00:46:36.359 127.0.0.1:54321       32110  #6426-181 INFO: GET /3/ModelBuilders/drf, parms: {}
+11-22 00:46:36.456 127.0.0.1:54321       32110  #6426-183 INFO: POST /3/ModelBuilders/drf, parms: {max_depth=5, seed=1, training_frame=RTMP_sid_aba0_2, ntrees=20, nbins=32, validation_frame=RTMP_sid_aba0_4, response_column=Species, ignored_columns=[""]}
+11-22 00:46:36.519 127.0.0.1:54321       32110  FJ-1-7    INFO: Building H2O DRF model with these parameters:
+11-22 00:46:36.531 127.0.0.1:54321       32110  FJ-1-7    INFO: {"_train":{"name":"RTMP_sid_aba0_2","type":"Key"},"_valid":{"name":"RTMP_sid_aba0_4","type":"Key"},"_nfolds":0,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"multinomial","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":[""],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":0,"_stopping_metric":"AUTO","_stopping_tolerance":0.001,"_response_column":"Species","_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_ntrees":20,"_max_depth":5,"_min_rows":1.0,"_nbins":32,"_nbins_cats":1024,"_min_split_improvement":1.0E-5,"_histogram_type":"AUTO","_r2_stopping":1.7976931348623157E308,"_nbins_top_level":1024,"_build_tree_one_node":false,"_score_tree_interval":0,"_initial_score_interval":4000,"_score_interval":4000,"_sample_rate":0.6320000290870667,"_sample_rate_per_class":null,"_calibrate_model":false,"_calibration_frame":null,"_col_sample_rate_change_per_level":1.0,"_col_sample_rate_per_tree":1.0,"_binomial_double_trees":false,"_mtries":-1}
+11-22 00:46:36.531 127.0.0.1:54321       32110  FJ-1-7    INFO: Dropping ignored columns: []
+11-22 00:46:36.560 127.0.0.1:54321       32110  FJ-1-7    INFO: Prior class distribution: [0.36134453781512604, 0.31092436974789917, 0.3277310924369748]
+11-22 00:46:36.560 127.0.0.1:54321       32110  FJ-1-7    INFO: Model class distribution: [0.36134453781512604, 0.31092436974789917, 0.3277310924369748]
+11-22 00:46:36.629 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO: Model Metrics Type: Multinomial
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  Description: Metrics reported on Out-Of-Bag training samples
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  model id: DRF_model_R_1511221425033_6
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  frame id: RTMP_sid_aba0_2
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  MSE: NaN
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  RMSE: NaN
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  logloss: NaN
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  mean_per_class_error: 0.0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  hit ratios: [0.0, 0.0, 0.0]
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:             setosa  versicolor  virginica  Error   Rate
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:     setosa       0           0          0    NaN  0 / 0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO: versicolor       0           0          0    NaN  0 / 0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  virginica       0           0          0    NaN  0 / 0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:     Totals       0           0          0    NaN  0 / 0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO: Model Metrics Type: Multinomial
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  Description: N/A
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  model id: DRF_model_R_1511221425033_6
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  frame id: RTMP_sid_aba0_4
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  MSE: 1.0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  RMSE: 1.0
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  logloss: 34.538776
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  mean_per_class_error: 0.72860473
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  hit ratios: [0.29032257, 0.41935483, 1.0]
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:             setosa  versicolor  virginica   Error     Rate
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:     setosa       1           4          2  0.8571    6 / 7
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO: versicolor       9           4          0  0.6923   9 / 13
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  virginica       4           3          4  0.6364   7 / 11
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:     Totals      14          11          6  0.7097  22 / 31
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO: Model Summary:
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:                0                        0                   0          0          0    0.00000           0           0     0.00000
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO: Scoring History:
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error Validation RMSE Validation LogLoss Validation Classification Error
+11-22 00:46:36.663 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.014 sec               0           NaN              NaN                           NaN             NaN                NaN                             NaN
+11-22 00:46:36.725 127.0.0.1:54321       32110  FJ-1-7    INFO: 1. tree was built in 00:00:00.059 (Wall: 22-Nov 00:46:36.723) 
+11-22 00:46:36.730 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.750 127.0.0.1:54321       32110  FJ-1-7    INFO: 2. tree was built in 00:00:00.009 (Wall: 22-Nov 00:46:36.750) 
+11-22 00:46:36.750 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.777 127.0.0.1:54321       32110  FJ-1-7    INFO: 3. tree was built in 00:00:00.015 (Wall: 22-Nov 00:46:36.777) 
+11-22 00:46:36.777 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.790 127.0.0.1:54321       32110  FJ-1-7    INFO: 4. tree was built in 00:00:00.010 (Wall: 22-Nov 00:46:36.790) 
+11-22 00:46:36.791 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.801 127.0.0.1:54321       32110  FJ-1-7    INFO: 5. tree was built in 00:00:00.008 (Wall: 22-Nov 00:46:36.801) 
+11-22 00:46:36.802 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.810 127.0.0.1:54321       32110  FJ-1-7    INFO: 6. tree was built in 00:00:00.006 (Wall: 22-Nov 00:46:36.810) 
+11-22 00:46:36.811 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.823 127.0.0.1:54321       32110  FJ-1-7    INFO: 7. tree was built in 00:00:00.010 (Wall: 22-Nov 00:46:36.823) 
+11-22 00:46:36.823 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.836 127.0.0.1:54321       32110  FJ-1-7    INFO: 8. tree was built in 00:00:00.010 (Wall: 22-Nov 00:46:36.836) 
+11-22 00:46:36.837 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.849 127.0.0.1:54321       32110  FJ-1-7    INFO: 9. tree was built in 00:00:00.009 (Wall: 22-Nov 00:46:36.849) 
+11-22 00:46:36.851 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.861 127.0.0.1:54321       32110  FJ-1-7    INFO: 10. tree was built in 00:00:00.008 (Wall: 22-Nov 00:46:36.861) 
+11-22 00:46:36.862 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.872 127.0.0.1:54321       32110  FJ-1-7    INFO: 11. tree was built in 00:00:00.008 (Wall: 22-Nov 00:46:36.872) 
+11-22 00:46:36.872 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.885 127.0.0.1:54321       32110  FJ-1-7    INFO: 12. tree was built in 00:00:00.010 (Wall: 22-Nov 00:46:36.885) 
+11-22 00:46:36.885 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.894 127.0.0.1:54321       32110  FJ-1-7    INFO: 13. tree was built in 00:00:00.005 (Wall: 22-Nov 00:46:36.894) 
+11-22 00:46:36.895 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.908 127.0.0.1:54321       32110  FJ-1-7    INFO: 14. tree was built in 00:00:00.007 (Wall: 22-Nov 00:46:36.908) 
+11-22 00:46:36.909 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.919 127.0.0.1:54321       32110  FJ-1-7    INFO: 15. tree was built in 00:00:00.008 (Wall: 22-Nov 00:46:36.919) 
+11-22 00:46:36.920 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.928 127.0.0.1:54321       32110  FJ-1-7    INFO: 16. tree was built in 00:00:00.005 (Wall: 22-Nov 00:46:36.928) 
+11-22 00:46:36.929 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.944 127.0.0.1:54321       32110  FJ-1-7    INFO: 17. tree was built in 00:00:00.010 (Wall: 22-Nov 00:46:36.944) 
+11-22 00:46:36.944 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.952 127.0.0.1:54321       32110  FJ-1-7    INFO: 18. tree was built in 00:00:00.006 (Wall: 22-Nov 00:46:36.952) 
+11-22 00:46:36.953 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.971 127.0.0.1:54321       32110  FJ-1-7    INFO: 19. tree was built in 00:00:00.004 (Wall: 22-Nov 00:46:36.971) 
+11-22 00:46:36.972 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.979 127.0.0.1:54321       32110  FJ-1-7    INFO: 20. tree was built in 00:00:00.005 (Wall: 22-Nov 00:46:36.979) 
+11-22 00:46:36.980 127.0.0.1:54321       32110  FJ-1-7    INFO: ============================================================== 
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Model Metrics Type: Multinomial
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  Description: Metrics reported on Out-Of-Bag training samples
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  model id: DRF_model_R_1511221425033_6
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  frame id: RTMP_sid_aba0_2
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  MSE: 0.039598048
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  RMSE: 0.19899258
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  logloss: 0.388089
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  mean_per_class_error: 0.06167706
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  hit ratios: [0.9411765, 1.0, 1.0]
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:             setosa  versicolor  virginica   Error     Rate
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:     setosa      43           0          0  0.0000   0 / 43
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: versicolor       0          33          4  0.1081   4 / 37
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  virginica       0           3         36  0.0769   3 / 39
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:     Totals      43          36         40  0.0588  7 / 119
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Model Metrics Type: Multinomial
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  Description: N/A
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  model id: DRF_model_R_1511221425033_6
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  frame id: RTMP_sid_aba0_4
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  MSE: 0.02532738
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  RMSE: 0.15914579
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  logloss: 0.08504537
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  mean_per_class_error: 0.030303031
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  hit ratios: [0.9677419, 1.0, 1.0]
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:             setosa  versicolor  virginica   Error    Rate
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:     setosa       7           0          0  0.0000   0 / 7
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: versicolor       0          13          0  0.0000  0 / 13
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  virginica       0           1         10  0.0909  1 / 11
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:     Totals       7          14         10  0.0323  1 / 31
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Variable Importances:
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:     Variable Relative Importance Scaled Importance Percentage
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  Petal_Width          720.984253          1.000000   0.529529
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Petal_Length          446.301025          0.619016   0.327787
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Sepal_Length          157.712570          0.218746   0.115833
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  Sepal_Width           36.559273          0.050707   0.026851
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Model Summary:
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:               20                       60                7856          1          5    3.26667           2          14     5.46667
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO: Scoring History:
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error Validation RMSE Validation LogLoss Validation Classification Error
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.014 sec               0           NaN              NaN                           NaN             NaN                NaN                             NaN
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.205 sec               1       0.28868          2.87823                       0.08333         0.17961            1.11415                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.232 sec               2       0.29528          2.47694                       0.09859         0.20080            1.13651                         0.06452
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.259 sec               3       0.26272          2.02128                       0.06897         0.19704            1.13572                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.272 sec               4       0.22825          1.40897                       0.04950         0.20352            1.15957                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.283 sec               5       0.20947          1.02040                       0.04673         0.21499            1.17088                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.292 sec               6       0.21844          1.00520                       0.05455         0.21063            1.16523                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.305 sec               7       0.18569          0.37763                       0.05217         0.18318            0.10551                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.318 sec               8       0.18162          0.36861                       0.05128         0.17175            0.09315                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.331 sec               9       0.18500          0.37088                       0.05085         0.17288            0.09239                         0.06452
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.343 sec              10       0.19639          0.37975                       0.05042         0.16924            0.09207                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.354 sec              11       0.20335          0.38657                       0.05882         0.16415            0.08792                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.367 sec              12       0.20400          0.38796                       0.05882         0.16995            0.09219                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.376 sec              13       0.21837          0.40494                       0.06723         0.17228            0.09635                         0.06452
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.390 sec              14       0.21256          0.39921                       0.06723         0.17536            0.09805                         0.06452
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.401 sec              15       0.21171          0.39842                       0.05882         0.17165            0.09484                         0.06452
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.410 sec              16       0.21113          0.39898                       0.05882         0.16885            0.09272                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.426 sec              17       0.20922          0.39752                       0.05882         0.16668            0.09067                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.434 sec              18       0.20341          0.39198                       0.05882         0.16864            0.09342                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.453 sec              19       0.20147          0.38978                       0.05042         0.16762            0.09203                         0.03226
+11-22 00:46:36.987 127.0.0.1:54321       32110  FJ-1-7    INFO:  2017-11-22 00:46:36  0.461 sec              20       0.19899          0.38809                       0.05882         0.15915            0.08505                         0.03226
+11-22 00:46:37.673 127.0.0.1:54321       32110  #6426-186 INFO: GET /3/Models/DRF_model_R_1511221425033_6, parms: {}
+11-22 00:47:27.808 127.0.0.1:54321       32110  #6426-183 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_5 (:= RTMP_sid_aba0_1 (as.factor (cols RTMP_sid_aba0_1 [4])) [4] [])), session_id=_sid_aba0}
+11-22 00:47:27.825 127.0.0.1:54321       32110  #6426-180 INFO: GET /3/Frames/RTMP_sid_aba0_5, parms: {row_count=10}
+11-22 00:47:30.794 127.0.0.1:54321       32110  #6426-186 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_6 (rows RTMP_sid_aba0_5 (<= (h2o.runif RTMP_sid_aba0_5 1) 0.75))), session_id=_sid_aba0}
+11-22 00:47:30.819 127.0.0.1:54321       32110  #6426-181 INFO: GET /3/Frames/RTMP_sid_aba0_6, parms: {row_count=10}
+11-22 00:47:30.881 127.0.0.1:54321       32110  #6426-180 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_8 (rows RTMP_sid_aba0_5 (> (tmp= RTMP_sid_aba0_7 (h2o.runif RTMP_sid_aba0_5 1)) 0.75))), session_id=_sid_aba0}
+11-22 00:47:30.896 127.0.0.1:54321       32110  #6426-182 INFO: GET /3/Frames/RTMP_sid_aba0_8, parms: {row_count=10}
+11-22 00:47:42.496 127.0.0.1:54321       32110  #6426-186 INFO: POST /99/Rapids, parms: {ast=(rm RTMP_sid_aba0_7), session_id=_sid_aba0}
+11-22 00:47:42.591 127.0.0.1:54321       32110  #6426-184 INFO: GET /3/ModelBuilders/drf, parms: {}
+11-22 00:47:42.645 127.0.0.1:54321       32110  #6426-180 INFO: POST /3/ModelBuilders/drf, parms: {max_depth=5, seed=1, training_frame=RTMP_sid_aba0_6, ntrees=20, nbins=32, validation_frame=RTMP_sid_aba0_8, response_column=Species, ignored_columns=[""]}
+11-22 00:47:42.647 127.0.0.1:54321       32110  FJ-1-5    INFO: Building H2O DRF model with these parameters:
+11-22 00:47:42.647 127.0.0.1:54321       32110  FJ-1-5    INFO: {"_train":{"name":"RTMP_sid_aba0_6","type":"Key"},"_valid":{"name":"RTMP_sid_aba0_8","type":"Key"},"_nfolds":0,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"multinomial","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":[""],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":0,"_stopping_metric":"AUTO","_stopping_tolerance":0.001,"_response_column":"Species","_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_ntrees":20,"_max_depth":5,"_min_rows":1.0,"_nbins":32,"_nbins_cats":1024,"_min_split_improvement":1.0E-5,"_histogram_type":"AUTO","_r2_stopping":1.7976931348623157E308,"_nbins_top_level":1024,"_build_tree_one_node":false,"_score_tree_interval":0,"_initial_score_interval":4000,"_score_interval":4000,"_sample_rate":0.6320000290870667,"_sample_rate_per_class":null,"_calibrate_model":false,"_calibration_frame":null,"_col_sample_rate_change_per_level":1.0,"_col_sample_rate_per_tree":1.0,"_binomial_double_trees":false,"_mtries":-1}
+11-22 00:47:42.647 127.0.0.1:54321       32110  FJ-1-5    INFO: Dropping ignored columns: []
+11-22 00:47:42.648 127.0.0.1:54321       32110  FJ-1-5    INFO: Prior class distribution: [0.36134453781512604, 0.31092436974789917, 0.3277310924369748]
+11-22 00:47:42.648 127.0.0.1:54321       32110  FJ-1-5    INFO: Model class distribution: [0.36134453781512604, 0.31092436974789917, 0.3277310924369748]
+11-22 00:47:42.654 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO: Model Metrics Type: Multinomial
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  Description: Metrics reported on Out-Of-Bag training samples
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  model id: DRF_model_R_1511221425033_7
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  frame id: RTMP_sid_aba0_6
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  MSE: NaN
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  RMSE: NaN
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  logloss: NaN
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  mean_per_class_error: 0.0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  hit ratios: [0.0, 0.0, 0.0]
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:             setosa  versicolor  virginica  Error   Rate
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:     setosa       0           0          0    NaN  0 / 0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO: versicolor       0           0          0    NaN  0 / 0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  virginica       0           0          0    NaN  0 / 0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:     Totals       0           0          0    NaN  0 / 0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO: Model Metrics Type: Multinomial
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  Description: N/A
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  model id: DRF_model_R_1511221425033_7
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  frame id: RTMP_sid_aba0_8
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  MSE: 1.0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  RMSE: 1.0
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  logloss: 34.538776
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  mean_per_class_error: 0.72860473
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  hit ratios: [0.29032257, 0.41935483, 1.0]
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:             setosa  versicolor  virginica   Error     Rate
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:     setosa       1           4          2  0.8571    6 / 7
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO: versicolor       9           4          0  0.6923   9 / 13
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  virginica       4           3          4  0.6364   7 / 11
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:     Totals      14          11          6  0.7097  22 / 31
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO: Model Summary:
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:                0                        0                   0          0          0    0.00000           0           0     0.00000
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO: Scoring History:
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error Validation RMSE Validation LogLoss Validation Classification Error
+11-22 00:47:42.657 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.001 sec               0           NaN              NaN                           NaN             NaN                NaN                             NaN
+11-22 00:47:42.662 127.0.0.1:54321       32110  FJ-1-5    INFO: 1. tree was built in 00:00:00.004 (Wall: 22-Nov 00:47:42.662) 
+11-22 00:47:42.663 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.678 127.0.0.1:54321       32110  FJ-1-5    INFO: 2. tree was built in 00:00:00.014 (Wall: 22-Nov 00:47:42.678) 
+11-22 00:47:42.678 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.689 127.0.0.1:54321       32110  FJ-1-5    INFO: 3. tree was built in 00:00:00.009 (Wall: 22-Nov 00:47:42.689) 
+11-22 00:47:42.690 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.699 127.0.0.1:54321       32110  FJ-1-5    INFO: 4. tree was built in 00:00:00.005 (Wall: 22-Nov 00:47:42.699) 
+11-22 00:47:42.700 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.706 127.0.0.1:54321       32110  FJ-1-5    INFO: 5. tree was built in 00:00:00.005 (Wall: 22-Nov 00:47:42.706) 
+11-22 00:47:42.708 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.726 127.0.0.1:54321       32110  FJ-1-5    INFO: 6. tree was built in 00:00:00.016 (Wall: 22-Nov 00:47:42.726) 
+11-22 00:47:42.726 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.740 127.0.0.1:54321       32110  FJ-1-5    INFO: 7. tree was built in 00:00:00.010 (Wall: 22-Nov 00:47:42.740) 
+11-22 00:47:42.741 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.757 127.0.0.1:54321       32110  FJ-1-5    INFO: 8. tree was built in 00:00:00.013 (Wall: 22-Nov 00:47:42.757) 
+11-22 00:47:42.759 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.781 127.0.0.1:54321       32110  FJ-1-5    INFO: 9. tree was built in 00:00:00.020 (Wall: 22-Nov 00:47:42.781) 
+11-22 00:47:42.787 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.799 127.0.0.1:54321       32110  FJ-1-5    INFO: 10. tree was built in 00:00:00.008 (Wall: 22-Nov 00:47:42.799) 
+11-22 00:47:42.799 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.807 127.0.0.1:54321       32110  FJ-1-5    INFO: 11. tree was built in 00:00:00.006 (Wall: 22-Nov 00:47:42.807) 
+11-22 00:47:42.809 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.815 127.0.0.1:54321       32110  FJ-1-5    INFO: 12. tree was built in 00:00:00.005 (Wall: 22-Nov 00:47:42.815) 
+11-22 00:47:42.816 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.821 127.0.0.1:54321       32110  FJ-1-5    INFO: 13. tree was built in 00:00:00.004 (Wall: 22-Nov 00:47:42.821) 
+11-22 00:47:42.822 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.831 127.0.0.1:54321       32110  FJ-1-5    INFO: 14. tree was built in 00:00:00.007 (Wall: 22-Nov 00:47:42.831) 
+11-22 00:47:42.832 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.837 127.0.0.1:54321       32110  FJ-1-5    INFO: 15. tree was built in 00:00:00.004 (Wall: 22-Nov 00:47:42.837) 
+11-22 00:47:42.838 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.843 127.0.0.1:54321       32110  FJ-1-5    INFO: 16. tree was built in 00:00:00.003 (Wall: 22-Nov 00:47:42.843) 
+11-22 00:47:42.843 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.849 127.0.0.1:54321       32110  FJ-1-5    INFO: 17. tree was built in 00:00:00.004 (Wall: 22-Nov 00:47:42.849) 
+11-22 00:47:42.850 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.856 127.0.0.1:54321       32110  FJ-1-5    INFO: 18. tree was built in 00:00:00.004 (Wall: 22-Nov 00:47:42.856) 
+11-22 00:47:42.857 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.879 127.0.0.1:54321       32110  FJ-1-5    INFO: 19. tree was built in 00:00:00.020 (Wall: 22-Nov 00:47:42.879) 
+11-22 00:47:42.880 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.904 127.0.0.1:54321       32110  FJ-1-5    INFO: 20. tree was built in 00:00:00.012 (Wall: 22-Nov 00:47:42.903) 
+11-22 00:47:42.905 127.0.0.1:54321       32110  FJ-1-5    INFO: ============================================================== 
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Model Metrics Type: Multinomial
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  Description: Metrics reported on Out-Of-Bag training samples
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  model id: DRF_model_R_1511221425033_7
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  frame id: RTMP_sid_aba0_6
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  MSE: 0.039598048
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  RMSE: 0.19899258
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  logloss: 0.388089
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  mean_per_class_error: 0.06167706
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  hit ratios: [0.9411765, 1.0, 1.0]
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:             setosa  versicolor  virginica   Error     Rate
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:     setosa      43           0          0  0.0000   0 / 43
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: versicolor       0          33          4  0.1081   4 / 37
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  virginica       0           3         36  0.0769   3 / 39
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:     Totals      43          36         40  0.0588  7 / 119
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Model Metrics Type: Multinomial
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  Description: N/A
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  model id: DRF_model_R_1511221425033_7
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  frame id: RTMP_sid_aba0_8
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  MSE: 0.02532738
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  RMSE: 0.15914579
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  logloss: 0.08504537
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  mean_per_class_error: 0.030303031
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  hit ratios: [0.9677419, 1.0, 1.0]
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:             setosa  versicolor  virginica   Error    Rate
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:     setosa       7           0          0  0.0000   0 / 7
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: versicolor       0          13          0  0.0000  0 / 13
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  virginica       0           1         10  0.0909  1 / 11
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:     Totals       7          14         10  0.0323  1 / 31
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Variable Importances:
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:     Variable Relative Importance Scaled Importance Percentage
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  Petal_Width          720.984192          1.000000   0.529529
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Petal_Length          446.301025          0.619016   0.327787
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Sepal_Length          157.712570          0.218746   0.115833
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  Sepal_Width           36.559273          0.050707   0.026851
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Model Summary:
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:               20                       60                7853          1          5    3.26667           2          14     5.46667
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO: Scoring History:
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error Validation RMSE Validation LogLoss Validation Classification Error
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.001 sec               0           NaN              NaN                           NaN             NaN                NaN                             NaN
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.015 sec               1       0.28868          2.87823                       0.08333         0.17961            1.11415                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.031 sec               2       0.29528          2.47694                       0.09859         0.20080            1.13651                         0.06452
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.042 sec               3       0.26272          2.02128                       0.06897         0.19704            1.13572                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.052 sec               4       0.22825          1.40897                       0.04950         0.20352            1.15957                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.059 sec               5       0.20947          1.02040                       0.04673         0.21499            1.17088                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.079 sec               6       0.21844          1.00520                       0.05455         0.21063            1.16523                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.093 sec               7       0.18569          0.37763                       0.05217         0.18318            0.10551                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.110 sec               8       0.18162          0.36861                       0.05128         0.17175            0.09315                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.134 sec               9       0.18500          0.37088                       0.05085         0.17288            0.09239                         0.06452
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.152 sec              10       0.19639          0.37975                       0.05042         0.16924            0.09207                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.160 sec              11       0.20335          0.38657                       0.05882         0.16415            0.08792                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.168 sec              12       0.20400          0.38796                       0.05882         0.16995            0.09219                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.174 sec              13       0.21837          0.40494                       0.06723         0.17228            0.09635                         0.06452
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.184 sec              14       0.21256          0.39921                       0.06723         0.17536            0.09805                         0.06452
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.190 sec              15       0.21171          0.39842                       0.05882         0.17165            0.09484                         0.06452
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.196 sec              16       0.21113          0.39898                       0.05882         0.16885            0.09272                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.202 sec              17       0.20922          0.39752                       0.05882         0.16668            0.09067                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.209 sec              18       0.20341          0.39198                       0.05882         0.16864            0.09342                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.232 sec              19       0.20147          0.38978                       0.05042         0.16762            0.09203                         0.03226
+11-22 00:47:42.920 127.0.0.1:54321       32110  FJ-1-5    INFO:  2017-11-22 00:47:42  0.256 sec              20       0.19899          0.38809                       0.05882         0.15915            0.08505                         0.03226
+11-22 00:47:43.765 127.0.0.1:54321       32110  #6426-181 INFO: GET /3/Models/DRF_model_R_1511221425033_7, parms: {}
+11-22 00:47:53.738 127.0.0.1:54321       32110  #6426-180 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_9 (:= RTMP_sid_aba0_5 (as.factor (cols RTMP_sid_aba0_5 [4])) [4] [])), session_id=_sid_aba0}
+11-22 00:47:53.754 127.0.0.1:54321       32110  #6426-182 INFO: GET /3/Frames/RTMP_sid_aba0_9, parms: {row_count=10}
+11-22 00:47:54.176 127.0.0.1:54321       32110  #6426-181 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_10 (rows RTMP_sid_aba0_9 (<= (h2o.runif RTMP_sid_aba0_9 1) 0.75))), session_id=_sid_aba0}
+11-22 00:47:54.193 127.0.0.1:54321       32110  #6426-184 INFO: GET /3/Frames/RTMP_sid_aba0_10, parms: {row_count=10}
+11-22 00:47:54.256 127.0.0.1:54321       32110  #6426-182 INFO: POST /99/Rapids, parms: {ast=(tmp= RTMP_sid_aba0_12 (rows RTMP_sid_aba0_9 (> (tmp= RTMP_sid_aba0_11 (h2o.runif RTMP_sid_aba0_9 1)) 0.75))), session_id=_sid_aba0}
+11-22 00:47:54.272 127.0.0.1:54321       32110  #6426-185 INFO: GET /3/Frames/RTMP_sid_aba0_12, parms: {row_count=10}
+11-22 00:47:54.443 127.0.0.1:54321       32110  #6426-181 INFO: GET /3/ModelBuilders/drf, parms: {}
+11-22 00:47:54.513 127.0.0.1:54321       32110  #6426-180 INFO: POST /99/Rapids, parms: {ast=(rm RTMP_sid_aba0_11), session_id=_sid_aba0}
+11-22 00:47:54.526 127.0.0.1:54321       32110  #6426-182 INFO: POST /3/ModelBuilders/drf, parms: {max_depth=5, seed=1, training_frame=RTMP_sid_aba0_10, ntrees=20, nbins=32, validation_frame=RTMP_sid_aba0_12, response_column=Species, ignored_columns=[""]}
+11-22 00:47:54.528 127.0.0.1:54321       32110  FJ-1-3    INFO: Building H2O DRF model with these parameters:
+11-22 00:47:54.528 127.0.0.1:54321       32110  FJ-1-3    INFO: {"_train":{"name":"RTMP_sid_aba0_10","type":"Key"},"_valid":{"name":"RTMP_sid_aba0_12","type":"Key"},"_nfolds":0,"_keep_cross_validation_predictions":false,"_keep_cross_validation_fold_assignment":false,"_parallelize_cross_validation":true,"_auto_rebalance":true,"_seed":1,"_fold_assignment":"AUTO","_categorical_encoding":"AUTO","_max_categorical_levels":10,"_distribution":"multinomial","_tweedie_power":1.5,"_quantile_alpha":0.5,"_huber_alpha":0.9,"_ignored_columns":[""],"_ignore_const_cols":true,"_weights_column":null,"_offset_column":null,"_fold_column":null,"_is_cv_model":false,"_score_each_iteration":false,"_max_runtime_secs":0.0,"_stopping_rounds":0,"_stopping_metric":"AUTO","_stopping_tolerance":0.001,"_response_column":"Species","_balance_classes":false,"_max_after_balance_size":5.0,"_class_sampling_factors":null,"_max_confusion_matrix_size":20,"_checkpoint":null,"_pretrained_autoencoder":null,"_ntrees":20,"_max_depth":5,"_min_rows":1.0,"_nbins":32,"_nbins_cats":1024,"_min_split_improvement":1.0E-5,"_histogram_type":"AUTO","_r2_stopping":1.7976931348623157E308,"_nbins_top_level":1024,"_build_tree_one_node":false,"_score_tree_interval":0,"_initial_score_interval":4000,"_score_interval":4000,"_sample_rate":0.6320000290870667,"_sample_rate_per_class":null,"_calibrate_model":false,"_calibration_frame":null,"_col_sample_rate_change_per_level":1.0,"_col_sample_rate_per_tree":1.0,"_binomial_double_trees":false,"_mtries":-1}
+11-22 00:47:54.528 127.0.0.1:54321       32110  FJ-1-3    INFO: Dropping ignored columns: []
+11-22 00:47:54.530 127.0.0.1:54321       32110  FJ-1-3    INFO: Prior class distribution: [0.36134453781512604, 0.31092436974789917, 0.3277310924369748]
+11-22 00:47:54.530 127.0.0.1:54321       32110  FJ-1-3    INFO: Model class distribution: [0.36134453781512604, 0.31092436974789917, 0.3277310924369748]
+11-22 00:47:54.545 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Metrics Type: Multinomial
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  Description: Metrics reported on Out-Of-Bag training samples
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  model id: DRF_model_R_1511221425033_8
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  frame id: RTMP_sid_aba0_10
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  MSE: NaN
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  RMSE: NaN
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  logloss: NaN
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  mean_per_class_error: 0.0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  hit ratios: [0.0, 0.0, 0.0]
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:             setosa  versicolor  virginica  Error   Rate
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:     setosa       0           0          0    NaN  0 / 0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO: versicolor       0           0          0    NaN  0 / 0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  virginica       0           0          0    NaN  0 / 0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:     Totals       0           0          0    NaN  0 / 0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Metrics Type: Multinomial
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  Description: N/A
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  model id: DRF_model_R_1511221425033_8
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  frame id: RTMP_sid_aba0_12
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  MSE: 1.0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  RMSE: 1.0
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  logloss: 34.538776
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  mean_per_class_error: 0.72860473
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  hit ratios: [0.29032257, 0.41935483, 1.0]
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:             setosa  versicolor  virginica   Error     Rate
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:     setosa       1           4          2  0.8571    6 / 7
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO: versicolor       9           4          0  0.6923   9 / 13
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  virginica       4           3          4  0.6364   7 / 11
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:     Totals      14          11          6  0.7097  22 / 31
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Summary:
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:                0                        0                   0          0          0    0.00000           0           0     0.00000
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO: Scoring History:
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error Validation RMSE Validation LogLoss Validation Classification Error
+11-22 00:47:54.554 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.002 sec               0           NaN              NaN                           NaN             NaN                NaN                             NaN
+11-22 00:47:54.576 127.0.0.1:54321       32110  FJ-1-3    INFO: 1. tree was built in 00:00:00.022 (Wall: 22-Nov 00:47:54.576) 
+11-22 00:47:54.577 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.588 127.0.0.1:54321       32110  FJ-1-3    INFO: 2. tree was built in 00:00:00.010 (Wall: 22-Nov 00:47:54.588) 
+11-22 00:47:54.589 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.593 127.0.0.1:54321       32110  FJ-1-3    INFO: 3. tree was built in 00:00:00.003 (Wall: 22-Nov 00:47:54.592) 
+11-22 00:47:54.594 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.598 127.0.0.1:54321       32110  FJ-1-3    INFO: 4. tree was built in 00:00:00.003 (Wall: 22-Nov 00:47:54.598) 
+11-22 00:47:54.599 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.604 127.0.0.1:54321       32110  FJ-1-3    INFO: 5. tree was built in 00:00:00.004 (Wall: 22-Nov 00:47:54.604) 
+11-22 00:47:54.605 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.608 127.0.0.1:54321       32110  FJ-1-3    INFO: 6. tree was built in 00:00:00.002 (Wall: 22-Nov 00:47:54.608) 
+11-22 00:47:54.609 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.612 127.0.0.1:54321       32110  FJ-1-3    INFO: 7. tree was built in 00:00:00.002 (Wall: 22-Nov 00:47:54.612) 
+11-22 00:47:54.612 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.615 127.0.0.1:54321       32110  FJ-1-3    INFO: 8. tree was built in 00:00:00.002 (Wall: 22-Nov 00:47:54.615) 
+11-22 00:47:54.616 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.628 127.0.0.1:54321       32110  FJ-1-3    INFO: 9. tree was built in 00:00:00.011 (Wall: 22-Nov 00:47:54.628) 
+11-22 00:47:54.629 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.633 127.0.0.1:54321       32110  FJ-1-3    INFO: 10. tree was built in 00:00:00.002 (Wall: 22-Nov 00:47:54.633) 
+11-22 00:47:54.634 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.637 127.0.0.1:54321       32110  FJ-1-3    INFO: 11. tree was built in 00:00:00.002 (Wall: 22-Nov 00:47:54.637) 
+11-22 00:47:54.637 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.643 127.0.0.1:54321       32110  FJ-1-3    INFO: 12. tree was built in 00:00:00.005 (Wall: 22-Nov 00:47:54.643) 
+11-22 00:47:54.643 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.657 127.0.0.1:54321       32110  FJ-1-3    INFO: 13. tree was built in 00:00:00.008 (Wall: 22-Nov 00:47:54.657) 
+11-22 00:47:54.660 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.664 127.0.0.1:54321       32110  FJ-1-3    INFO: 14. tree was built in 00:00:00.003 (Wall: 22-Nov 00:47:54.664) 
+11-22 00:47:54.664 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.674 127.0.0.1:54321       32110  FJ-1-3    INFO: 15. tree was built in 00:00:00.008 (Wall: 22-Nov 00:47:54.674) 
+11-22 00:47:54.675 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.678 127.0.0.1:54321       32110  FJ-1-3    INFO: 16. tree was built in 00:00:00.001 (Wall: 22-Nov 00:47:54.678) 
+11-22 00:47:54.680 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.704 127.0.0.1:54321       32110  FJ-1-3    INFO: 17. tree was built in 00:00:00.016 (Wall: 22-Nov 00:47:54.704) 
+11-22 00:47:54.705 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.708 127.0.0.1:54321       32110  FJ-1-3    INFO: 18. tree was built in 00:00:00.001 (Wall: 22-Nov 00:47:54.708) 
+11-22 00:47:54.709 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.712 127.0.0.1:54321       32110  FJ-1-3    INFO: 19. tree was built in 00:00:00.002 (Wall: 22-Nov 00:47:54.712) 
+11-22 00:47:54.713 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.715 127.0.0.1:54321       32110  FJ-1-3    INFO: 20. tree was built in 00:00:00.001 (Wall: 22-Nov 00:47:54.715) 
+11-22 00:47:54.716 127.0.0.1:54321       32110  FJ-1-3    INFO: ============================================================== 
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Metrics Type: Multinomial
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  Description: Metrics reported on Out-Of-Bag training samples
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  model id: DRF_model_R_1511221425033_8
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  frame id: RTMP_sid_aba0_10
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  MSE: 0.039598048
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  RMSE: 0.19899258
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  logloss: 0.388089
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  mean_per_class_error: 0.06167706
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  hit ratios: [0.9411765, 1.0, 1.0]
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:             setosa  versicolor  virginica   Error     Rate
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:     setosa      43           0          0  0.0000   0 / 43
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: versicolor       0          33          4  0.1081   4 / 37
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  virginica       0           3         36  0.0769   3 / 39
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:     Totals      43          36         40  0.0588  7 / 119
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Metrics Type: Multinomial
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  Description: N/A
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  model id: DRF_model_R_1511221425033_8
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  frame id: RTMP_sid_aba0_12
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  MSE: 0.02532738
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  RMSE: 0.15914579
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  logloss: 0.08504537
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  mean_per_class_error: 0.030303031
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  hit ratios: [0.9677419, 1.0, 1.0]
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  CM: Confusion Matrix (Row labels: Actual class; Column labels: Predicted class):
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:             setosa  versicolor  virginica   Error    Rate
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:     setosa       7           0          0  0.0000   0 / 7
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: versicolor       0          13          0  0.0000  0 / 13
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  virginica       0           1         10  0.0909  1 / 11
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:     Totals       7          14         10  0.0323  1 / 31
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Variable Importances:
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:     Variable Relative Importance Scaled Importance Percentage
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  Petal_Width          720.984253          1.000000   0.529529
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Petal_Length          446.301025          0.619016   0.327787
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Sepal_Length          157.712570          0.218746   0.115833
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  Sepal_Width           36.559273          0.050707   0.026851
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Model Summary:
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  Number of Trees Number of Internal Trees Model Size in Bytes Min. Depth Max. Depth Mean Depth Min. Leaves Max. Leaves Mean Leaves
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:               20                       60                7853          1          5    3.26667           2          14     5.46667
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO: Scoring History:
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:            Timestamp   Duration Number of Trees Training RMSE Training LogLoss Training Classification Error Validation RMSE Validation LogLoss Validation Classification Error
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.002 sec               0           NaN              NaN                           NaN             NaN                NaN                             NaN
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.048 sec               1       0.28868          2.87823                       0.08333         0.17961            1.11415                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.060 sec               2       0.29528          2.47694                       0.09859         0.20080            1.13651                         0.06452
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.064 sec               3       0.26272          2.02128                       0.06897         0.19704            1.13572                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.070 sec               4       0.22825          1.40897                       0.04950         0.20352            1.15957                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.076 sec               5       0.20947          1.02040                       0.04673         0.21499            1.17088                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.080 sec               6       0.21844          1.00520                       0.05455         0.21063            1.16523                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.084 sec               7       0.18569          0.37763                       0.05217         0.18318            0.10551                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.087 sec               8       0.18162          0.36861                       0.05128         0.17175            0.09315                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.100 sec               9       0.18500          0.37088                       0.05085         0.17288            0.09239                         0.06452
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.105 sec              10       0.19639          0.37975                       0.05042         0.16924            0.09207                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.109 sec              11       0.20335          0.38657                       0.05882         0.16415            0.08792                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.115 sec              12       0.20400          0.38796                       0.05882         0.16995            0.09219                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.129 sec              13       0.21837          0.40494                       0.06723         0.17228            0.09635                         0.06452
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.136 sec              14       0.21256          0.39921                       0.06723         0.17536            0.09805                         0.06452
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.146 sec              15       0.21171          0.39842                       0.05882         0.17165            0.09484                         0.06452
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.150 sec              16       0.21113          0.39898                       0.05882         0.16885            0.09272                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.176 sec              17       0.20922          0.39752                       0.05882         0.16668            0.09067                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.180 sec              18       0.20341          0.39198                       0.05882         0.16864            0.09342                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.184 sec              19       0.20147          0.38978                       0.05042         0.16762            0.09203                         0.03226
+11-22 00:47:54.719 127.0.0.1:54321       32110  FJ-1-3    INFO:  2017-11-22 00:47:54  0.187 sec              20       0.19899          0.38809                       0.05882         0.15915            0.08505                         0.03226
+11-22 00:47:55.627 127.0.0.1:54321       32110  #6426-184 INFO: GET /3/Models/DRF_model_R_1511221425033_8, parms: {}
