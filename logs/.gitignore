@@ -1,1 +1,3 @@
 log4j.spark.log
+/logs
+/h2ologs
